@@ -1,0 +1,8 @@
+#Birthday problem: the minimum number of people in a room so that the probability that there are at least two of them have the same birthday is greater than 1/2
+m = 1
+for i in range(2, 367):
+	m = m * (367 - i)/366
+	p = 1 - m
+	if p > 0.5:
+		print(i)
+		break
